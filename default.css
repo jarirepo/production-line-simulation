@@ -1,0 +1,22 @@
+body {
+	overflow: scroll;
+	font-family: Cambria, sans-serif;
+	font-size: 11pt;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 14pt;
+}
+p {
+	margin: 6pt;
+}
+
+#controlPanel {
+	margin-bottom: 6pt;
+}
+
+#sketchContainer {
+	border: none;
+}
