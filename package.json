@@ -1,0 +1,31 @@
+{
+  "name": "production-line-simulation",
+  "version": "1.0.0",
+  "description": "A production line simulation with JavaScript and p5.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "webpack && webpack-dev-server --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarirepo/production-line-simulation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarirepo/production-line-simulation/issues"
+  },
+  "homepage": "https://github.com/jarirepo/production-line-simulation#readme",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.1.5",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
