@@ -14,9 +14,20 @@ p {
 }
 
 #controlPanel {
-	margin-bottom: 6pt;
+	margin: 12pt;
+	padding: 12pt;
+	background: #ccc;
 }
 
 #sketchContainer {
 	border: none;
+}
+
+canvas {
+	margin: 10px;
+}
+
+button, input {
+	padding: 6pt;
+	font: normal 12pt Sans-serif;
 }
