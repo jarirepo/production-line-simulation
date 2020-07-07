@@ -3,6 +3,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   target: 'web',
+  mode: 'development',
   entry: {
     filename: './src/sketch.js'
   },
