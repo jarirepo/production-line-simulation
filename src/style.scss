@@ -1,0 +1,33 @@
+body {
+	overflow: scroll;
+	font-family: Cambria, sans-serif;
+	font-size: 11pt;
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-size: 14pt;
+}
+p {
+	margin: 6pt;
+}
+
+#controlPanel {
+	margin: 12pt;
+	padding: 12pt;
+	background: #ccc;
+}
+
+#sketchContainer {
+	border: none;
+}
+
+canvas {
+	margin: 10px;
+}
+
+button, input {
+	padding: 6pt;
+	font: normal 12pt Sans-serif;
+}
