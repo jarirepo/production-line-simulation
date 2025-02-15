@@ -3,3 +3,7 @@ node_modules
 # Parcel
 .parcel-cache
 dist
+
+# Package Manager (this project uses Yarn)
+package-lock.json
+yarn-error.log
