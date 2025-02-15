@@ -1,9 +1,12 @@
 # Changelog
 
 # [Unreleased][dev]
+
+## [2.0.0][2.0.0] - 2025-02-15
 ### Changed
-- 1.0.0 Rewrite from JS to [TypeScript][ts]
+- 1.0.0 Uses Yarn as package manager
 - 1.0.0 Replaced [webpack][webpack] bundler with [Parcel][parcel]
+- 1.0.0 Rewrite from JS to [TypeScript][ts]
 
 ## [1.0.0][1.0.0] - 2017-12-31
 ### Changed
