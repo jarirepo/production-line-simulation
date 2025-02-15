@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Production Line Simulation</title>
+	<link rel="stylesheet" type="text/css" href="style.scss">
+</head>
+
+<body>
+<h1>Production line simulation</h1>
+<p>An interactive discrete-time simulation of a factory-like production line written in 
+		TypeScript and visualized in an HTML5 Canvas. 
+	It supports multiple stations which can be linked serially, in paralell or in any 
+	combination thereof. 
+	In general terms this is an example of a <em>multi-stage producer-consumer pattern</em> 
+	which potentially could yield an unpredictable outcome. 
+	An alarm is fired when the system is completely jammed. 
+	This occurs when all buffers are full. To see this effect, unccheck "Auto-remove output" 
+	and wait until all buffers gets filled one by one. 
+	The numerical and graphical representation of the overall productivity is shown on-screen.
+</p>
+<p>
+	<em>Follow the on-screen instructions to proceed</em>.
+</p>
+
+<div id="controlPanel">
+	<button id="startLine">Start</button>
+	<button id="resetLine">Reset</button>
+	<label for="autoAddInput" style="cursor:pointer">
+		<input id="autoAddInput" type="checkbox">Auto-add input
+	</label>
+	<label for="autoRemoveOutput" style="cursor:pointer">
+		<input id="autoRemoveOutput" type="checkbox">Auto-remove output
+	</label>
+</div>
+
+<canvas id="simulation" width="575" height="350">Canvas is not supported</canvas>
+
+<audio id="alarm-audio" preload="none">
+	<source type="audio/wav" src="../assets/alarm.wav">
+	Audio is not supported
+</audio>
+
+<h2>Details</h2>
+<p>Some implementation details.</p>	
+<ul>
+	<li>The production line is implemented as a multi-level bi-directional linked list where each station is connected to the station that follows but also to the previous stations</li>
+	<li>The input to a station is drawn directly from its input FIFO-buffer</li>
+	<li>Configurable station throughput times, buffer sizes and failure probabilities</li>
+	<li>Simulated station failures which affect the overall production rate</li>
+	<li>During a station failure it cannot receive any input until the maintenance period is completed</li>
+	<li>The visual output of the full production line is based on forward recursion</li>
+	<li>Time-based update of the production line based on a recursive backward propagation algorithm</li>
+	<li>Generates a realtime performance metric in terms of the overall production rate (number of produced items per time unit)</li>
+</ul>
+<p>The original sketches for the production line simulator can be found 
+	<a href="../docs/sketch1.png" target="_blank">here</a> and 
+	<a href="../docs/sketch2.png" target="_blank">here</a>.
+</p>
+<script type="module" src="index.ts"></script>
+</body>
+</html>
