@@ -8,8 +8,8 @@
   },
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html -p 3100",
-    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html -p 3100 --log-level verbose",
+    "build": "parcel build src/index.html --log-level verbose",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,8 +25,11 @@
   "homepage": "https://github.com/jarirepo/production-line-simulation#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "2.13.3",
+    "@types/jquery": "^3.5.32",
     "parcel": "^2.13.3",
     "typescript": "^5.7.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.7.1"
+  }
 }
